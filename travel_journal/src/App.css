@@ -41,22 +41,3 @@
   color: #888;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
-.header{
-  width: 100vw;
-  margin: 5px;
-  border-radius: 15px;
-  padding: 20px;
-  background-color: rgb(250, 79, 79);
-}
-.header-box{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  color: white;
-  justify-content: center;
-}
