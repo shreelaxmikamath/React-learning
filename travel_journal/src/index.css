@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.header {
+  width: 100vw; 
+  padding: 20px;
+  border-radius: 15px; 
+  background-color: rgb(250, 79, 79);
+}
+
+.header-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  justify-content: center;
+}
+
+.journal-entry{
+    display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 50px 400px;
+  gap: 20px;
+  width: 60rem;
+}
+.main-image{
+    width: 200px;
+    height: 250px;
+}
+.pinicon{
+    width: 15px;
+    height: 15px;
+}
+.info-container{
+text-align: start;
+}
+
