@@ -9,7 +9,8 @@ export default function Joke(props) {
                 {props.comments.map((comment, index) => (
                     <li key={index}>{comment}</li>
                 ))}
-            </ul>            <hr />
+            </ul>         
+               <hr />
         </>
     )
     
