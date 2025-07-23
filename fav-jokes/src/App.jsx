@@ -1,7 +1,7 @@
 import './index.css'
 import Joke from './components/Joke'
 import jokesData from './jokesData'
-function App() {
+export default function App() {
 const JokeElements=jokesData.map((joke)=>{
   return <Joke  setup={joke.setup} 
   punchline={joke.punchline} 
@@ -17,5 +17,3 @@ const JokeElements=jokesData.map((joke)=>{
     </>
   )
 }
-
-export default App

@@ -3,7 +3,7 @@ function Entry(props) {
     return(
         <article className="journal-entry">
             <div className='main-image-container'>
-              <img src={props.img} alt={props.alt} className='main-image'/>
+              <img src={props.img.src} alt={props.img.alt} className='main-image'/>
 </div>
    
             <div className='info-container'>
@@ -11,6 +11,7 @@ function Entry(props) {
                 <span>{props.country}</span>
                 <a 
                     href={props.googleMapsLink}
+                    className='maplink'
                 >
                     View on Google Maps
                 </a>
