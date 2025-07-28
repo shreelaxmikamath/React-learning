@@ -19,11 +19,6 @@ body {
     flex-direction: column;
 }
 
-.container > h1 {
-    font-size: 1.5rem;
-    margin-top: 0;
-}
-
 .counter {
     display: flex;
     align-items: flex-end;
@@ -159,7 +154,6 @@ p {
 }   */
 
                             /* TASK-4 */
-
 /* * {
     box-sizing: border-box;
 }
@@ -219,12 +213,12 @@ main {
 .card .favorite-button:active {
     transform: none;
     box-shadow: none;
-} */
+}  */
 
                             /* TASK-5 */
 
 
-* {
+/* * {
     box-sizing: border-box;
 }
 
@@ -269,4 +263,36 @@ button:hover {
     background-color: #115E59;
     border-color: #042F2E;
     color: white;
+} */
+
+                            /* TASK-7 */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1C1917;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pad-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+}
+
+button {
+    height: 100px;
+    width: 100px;
+    border: 3px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    
 }

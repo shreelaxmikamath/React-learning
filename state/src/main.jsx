@@ -7,6 +7,6 @@ import './index.css';
 const root = createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>
-    <App />
+    <App darkMode={true}/>
   </StrictMode>
 );
