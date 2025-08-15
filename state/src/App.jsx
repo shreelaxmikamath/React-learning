@@ -252,10 +252,15 @@ import Pad from "./components/Pad"
 export default function App(props) {
     const [pad,setPads]=useState(pads)
 
+    function togglePad(id){
+        setPads(prevPad=> prevPad.map((item) => {
+           return  item.id===id?{...item,on:!item.on}:item
+       }))
+    }
 
     const padElements = pad.map((item) => {
-  return <Pad color={item.color} id={item.id}/> ;
-   });
+       return <Pad color={item.color} id={item.id} key={item.id} on={item.on} togglepad={togglePad}/> ;
+    });
     return (
         <main>
             <div className="pad-container">
