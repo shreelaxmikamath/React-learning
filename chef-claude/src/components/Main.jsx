@@ -3,6 +3,7 @@ import { useState } from 'react'
 import ClaudeRecipe from './ClaudeRecipe'
 import IngredientsList from './IngredientsList'
 import { getRecipeFromMistral } from '../ai'
+import { useRef ,useEffect} from 'react'
 
 
 export default function Main(params) {
@@ -14,7 +15,22 @@ function handleSubmit(formData) {
     setIngredients(prevIngredients=>[...prevIngredients,newIngredient])
 }
 
-const [recipe,setrecipe]=useState(false)
+const [recipe,setrecipe]=useState("")
+const recipeSecion=useRef(null)
+console.log(recipeSecion)
+
+useEffect(() => {
+    if(recipe!==""&& recipeSecion.current!==null){
+    // recipeSecion.current.scrollIntoView()
+    const yCoord = recipeSecion.current.getBoundingClientRect().top
+window.scroll({
+    top: yCoord,
+    behavior: "smooth"
+})
+
+    }
+}, [recipe]);
+
 async function getRecipe(){
   const generatedRecipe=await getRecipeFromMistral(ingredients)
   setrecipe(generatedRecipe)
@@ -31,7 +47,7 @@ async function getRecipe(){
                 />
                 <button >Add ingredient</button>
             </form>
-            { ingredients.length>0 && <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />}
+            { ingredients.length>0 && <IngredientsList ingredients={ingredients} getRecipe={getRecipe} ref={recipeSecion}/>}
             {recipe && <ClaudeRecipe recipe={recipe} />}
         </main>
     )
